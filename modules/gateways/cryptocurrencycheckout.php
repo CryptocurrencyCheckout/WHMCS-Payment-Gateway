@@ -120,6 +120,14 @@ function cryptocurrencycheckout_config()
             'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
         ),
 
+        'cdzcAddress' => array(
+            'FriendlyName' => 'CDZC Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
         'APIToken' => array(
             'FriendlyName' => 'API Token',
             'Type' => 'textarea',
@@ -149,6 +157,7 @@ function cryptocurrencycheckout_link($params)
     $ltcAddress = $params['ltcAddress'];
     $dashAddress = $params['dashAddress'];
     $sendAddress = $params['sendAddress'];
+    $cdzcAddress = $params['cdzcAddress'];
 
     // Invoice Parameters
     $CC_invoiceId = $params['invoiceid'];
@@ -168,6 +177,7 @@ function cryptocurrencycheckout_link($params)
     $postfields['CC_LTC_ADDRESS'] = $ltcAddress;
     $postfields['CC_DASH_ADDRESS'] = $dashAddress;
     $postfields['CC_SEND_ADDRESS'] = $sendAddress;
+    $postfields['CC_CDZC_ADDRESS'] = $cdzcAddress;
 
     $htmlOutput = '<form method="POST" action="' . $url . '">';
     foreach ($postfields as $k => $v) {
