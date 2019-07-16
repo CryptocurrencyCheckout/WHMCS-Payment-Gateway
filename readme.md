@@ -62,4 +62,7 @@ Please do! We'd like to see the changes and different methods people come up for
 = 2019.06.30 - version 1.0.2 =
  * Add Cryptocurrencies: COLX to plugin
 
+= 2019.07.15 - version 1.0.3 =
+ * Add Cryptocurrencies: ZNZ to plugin
+
 
