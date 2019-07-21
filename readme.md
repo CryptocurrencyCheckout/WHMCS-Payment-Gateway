@@ -3,7 +3,7 @@
  - Contributors: Ratstang, CryptocurrencyCheckout
  - Tags: WHMCS, payment gateway, gateway, accept cryptocurrency, crypto, bitcoin, litecoin, ethereum, dash, more.
  - [Donate link](https://cryptocurrencycheckout.com/donate/CryptoCheckout)
- - Stable Tag: 1.0.2
+ - Stable Tag: 1.0.4
  - License: MIT
  - License URI: https://opensource.org/licenses/MIT
 
@@ -64,5 +64,8 @@ Please do! We'd like to see the changes and different methods people come up for
 
 = 2019.07.15 - version 1.0.3 =
  * Add Cryptocurrencies: ZNZ to plugin
+
+= 2019.07.20 - version 1.0.4 =
+ * Add Cryptocurrencies: THC to plugin
 
 
