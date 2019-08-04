@@ -8,7 +8,7 @@
  * 
  * Author: CryptocurrencyCheckout
  * Author URI: https://cryptocurrencycheckout.com/
- * Version: 1.0.4
+ * Version: 1.0.5
  * 
  * @see https://cryptocurrencycheckout.com/guides/whmcs
  * 
@@ -160,6 +160,39 @@ function cryptocurrencycheckout_config()
             'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
         ),
 
+        'ecaAddress' => array(
+            'FriendlyName' => 'ECA Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
+        'pivxAddress' => array(
+            'FriendlyName' => 'PIVX Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
+        'nbrAddress' => array(
+            'FriendlyName' => 'NBR Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
+        'galiAddress' => array(
+            'FriendlyName' => 'GALI Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
+
         'APIToken' => array(
             'FriendlyName' => 'API Token',
             'Type' => 'textarea',
@@ -194,6 +227,10 @@ function cryptocurrencycheckout_link($params)
     $colxAddress = $params['colxAddress'];
     $znzAddress = $params['znzAddress'];
     $thcAddress = $params['thcAddress'];
+    $ecaAddress = $params['ecaAddress'];
+    $pivxAddress = $params['pivxAddress'];
+    $nbrAddress = $params['nbrAddress'];
+    $galiAddress = $params['galiAddress'];
 
     // Invoice Parameters
     $CC_invoiceId = $params['invoiceid'];
@@ -218,6 +255,10 @@ function cryptocurrencycheckout_link($params)
     $postfields['CC_COLX_ADDRESS'] = $colxAddress;
     $postfields['CC_ZNZ_ADDRESS'] = $znzAddress;
     $postfields['CC_THC_ADDRESS'] = $thcAddress;
+    $postfields['CC_ECA_ADDRESS'] = $ecaAddress;
+    $postfields['CC_PIVX_ADDRESS'] = $pivxAddress;
+    $postfields['CC_NBR_ADDRESS'] = $nbrAddress;
+    $postfields['CC_GALI_ADDRESS'] = $galiAddress;
 
     $htmlOutput = '<form method="POST" action="' . $url . '">';
     foreach ($postfields as $k => $v) {
