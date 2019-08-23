@@ -8,7 +8,7 @@
  * 
  * Author: CryptocurrencyCheckout
  * Author URI: https://cryptocurrencycheckout.com/
- * Version: 1.0.5
+ * Version: 1.0.6
  * 
  * @see https://cryptocurrencycheckout.com/guides/whmcs
  * 
@@ -192,6 +192,22 @@ function cryptocurrencycheckout_config()
             'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
         ),
 
+        'bitcAddress' => array(
+            'FriendlyName' => 'BITC Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
+        'okAddress' => array(
+            'FriendlyName' => 'OK Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
 
         'APIToken' => array(
             'FriendlyName' => 'API Token',
@@ -231,6 +247,8 @@ function cryptocurrencycheckout_link($params)
     $pivxAddress = $params['pivxAddress'];
     $nbrAddress = $params['nbrAddress'];
     $galiAddress = $params['galiAddress'];
+    $bitcAddress = $params['bitcAddress'];
+    $okAddress = $params['okAddress'];
 
     // Invoice Parameters
     $CC_invoiceId = $params['invoiceid'];
@@ -259,6 +277,8 @@ function cryptocurrencycheckout_link($params)
     $postfields['CC_PIVX_ADDRESS'] = $pivxAddress;
     $postfields['CC_NBR_ADDRESS'] = $nbrAddress;
     $postfields['CC_GALI_ADDRESS'] = $galiAddress;
+    $postfields['CC_BITC_ADDRESS'] = $bitcAddress;
+    $postfields['CC_OK_ADDRESS'] = $okAddress;
 
     $htmlOutput = '<form method="POST" action="' . $url . '">';
     foreach ($postfields as $k => $v) {
