@@ -8,7 +8,7 @@
  * 
  * Author: CryptocurrencyCheckout
  * Author URI: https://cryptocurrencycheckout.com/
- * Version: 1.0.6
+ * Version: 1.0.7
  * 
  * @see https://cryptocurrencycheckout.com/guides/whmcs
  * 
@@ -208,6 +208,37 @@ function cryptocurrencycheckout_config()
             'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
         ),
 
+        'ethploAddress' => array(
+            'FriendlyName' => 'ETHplode Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
+        'arkAddress' => array(
+            'FriendlyName' => 'ARK Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
+        'veilAddress' => array(
+            'FriendlyName' => 'VEIL Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
+        'dogeAddress' => array(
+            'FriendlyName' => 'DOGE Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
 
         'APIToken' => array(
             'FriendlyName' => 'API Token',
@@ -249,6 +280,10 @@ function cryptocurrencycheckout_link($params)
     $galiAddress = $params['galiAddress'];
     $bitcAddress = $params['bitcAddress'];
     $okAddress = $params['okAddress'];
+    $ethploAddress = $params['ethploAddress'];
+    $arkAddress = $params['arkAddress'];
+    $veilAddress = $params['veilAddress'];
+    $dogeAddress = $params['dogeAddress'];
 
     // Invoice Parameters
     $CC_invoiceId = $params['invoiceid'];
@@ -279,6 +314,10 @@ function cryptocurrencycheckout_link($params)
     $postfields['CC_GALI_ADDRESS'] = $galiAddress;
     $postfields['CC_BITC_ADDRESS'] = $bitcAddress;
     $postfields['CC_OK_ADDRESS'] = $okAddress;
+    $postfields['CC_ETHPLO_ADDRESS'] = $ethploAddress;
+    $postfields['CC_ARK_ADDRESS'] = $arkAddress;
+    $postfields['CC_VEIL_ADDRESS'] = $veilAddress;
+    $postfields['CC_DOGE_ADDRESS'] = $dogeAddress;
 
     $htmlOutput = '<form method="POST" action="' . $url . '">';
     foreach ($postfields as $k => $v) {
