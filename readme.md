@@ -15,7 +15,7 @@
 This Plugin connects your WHMCS Platform Checkout to the CryptocurrencyCheckout Payment Gateway so you can start accepting Cryptocurrencies like Bitcoin, Ethereum, Dash, Litecoin and more for free.
 
 **What cryptocurrencies can be currently accept?:**
-Bitcoin, Ethereum, Litecoin, Dash, Zenzo, PirateChain, CryptoDezireCash, Social Send, ColossusXT, HempCoin, Electra, PIVX, Niobio, Galilel, Bitcash, Bitcash, OKcash.
+Bitcoin, Ethereum, Litecoin, Dash, Zenzo, PirateChain, CryptoDezireCash, Social Send, ColossusXT, HempCoin, Electra, PIVX, Niobio, Galilel, Bitcash, Bitcash, OKcash, Ethplode, Veil, Ark, Dogecoin.
 Want your coin added? Or want to suggest a coin to be added? Contact us.
 
 **What is CryptocurrencyCheckout:**
