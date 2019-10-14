@@ -8,7 +8,7 @@
  * 
  * Author: CryptocurrencyCheckout
  * Author URI: https://cryptocurrencycheckout.com/
- * Version: 1.0.8
+ * Version: 1.0.9
  * 
  * @see https://cryptocurrencycheckout.com/guides/whmcs
  * 
@@ -264,6 +264,14 @@ function cryptocurrencycheckout_config()
             'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
         ),
 
+        'rpdAddress' => array(
+            'FriendlyName' => 'RPD Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
         'APIToken' => array(
             'FriendlyName' => 'API Token',
             'Type' => 'textarea',
@@ -311,6 +319,7 @@ function cryptocurrencycheckout_link($params)
     $nbxAddress = $params['nbxAddress'];
     $xnvAddress = $params['xnvAddress'];
     $sumoAddress = $params['sumoAddress'];
+    $rpdAddress = $params['rpdAddress'];
 
     // Invoice Parameters
     $CC_invoiceId = $params['invoiceid'];
@@ -348,6 +357,7 @@ function cryptocurrencycheckout_link($params)
     $postfields['CC_NBX_ADDRESS'] = $nbxAddress;
     $postfields['CC_XNV_ADDRESS'] = $xnvAddress;
     $postfields['CC_SUMO_ADDRESS'] = $sumoAddress;
+    $postfields['CC_RPD_ADDRESS'] = $rpdAddress;
 
     $htmlOutput = '<form method="POST" action="' . $url . '">';
     foreach ($postfields as $k => $v) {
