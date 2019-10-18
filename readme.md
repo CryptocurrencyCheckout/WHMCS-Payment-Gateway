@@ -3,7 +3,7 @@
  - Contributors: Ratstang, CryptocurrencyCheckout
  - Tags: WHMCS, payment gateway, gateway, accept cryptocurrency, crypto, bitcoin, litecoin, ethereum, dash, more.
  - [Donate link](https://cryptocurrencycheckout.com/donate/CryptoCheckout)
- - Stable Tag: 1.0.9
+ - Stable Tag: 1.1.0
  - License: MIT
  - License URI: https://opensource.org/licenses/MIT
 
@@ -15,7 +15,7 @@
 This Plugin connects your WHMCS Platform Checkout to the CryptocurrencyCheckout Payment Gateway so you can start accepting Cryptocurrencies like Bitcoin, Ethereum, Dash, Litecoin and more for free.
 
 **What cryptocurrencies can be currently accept?:**
-Bitcoin, Ethereum, Litecoin, Dash, Zenzo, PirateChain, CryptoDezireCash, Social Send, ColossusXT, HempCoin, Electra, PIVX, Niobio, Galilel, Bitcash, Bitcash, OKcash, Ethplode, Veil, Ark, Dogecoin, Netbox, Nerva, Sumokoin, Rapids
+Bitcoin, Ethereum, Litecoin, Dash, Zenzo, PirateChain, CryptoDezireCash, Social Send, ColossusXT, HempCoin, Electra, PIVX, Niobio, Galilel, Bitcash, Bitcash, OKcash, Ethplode, Veil, Ark, Dogecoin, Netbox, Nerva, Sumokoin, Rapids, Transcendence, Komodo, Verus
 Want your coin added? Or want to suggest a coin to be added? Contact us.
 
 **What is CryptocurrencyCheckout:**
@@ -71,16 +71,19 @@ Please do! We'd like to see the changes and different methods people come up for
 = 2019.08.04 - version 1.0.5 =
  * Add Cryptocurrencies: ECA, PIVX, NBR, GALI to plugin
 
- = 2019.08.23 - version 1.0.6 =
+= 2019.08.23 - version 1.0.6 =
  * Add Cryptocurrencies: BITC, OK to plugin
  
-  = 2019.09.13 - version 1.0.7 =
+= 2019.09.13 - version 1.0.7 =
  * Add Cryptocurrencies: ETHPLO, ARK, VEIL, DOGE to plugin
  
-   = 2019.10.07 - version 1.0.8 =
+= 2019.10.07 - version 1.0.8 =
  * Add Cryptocurrencies: NBX, XNV, SUMO to plugin
 
-    = 2019.10.14 - version 1.0.8 =
+= 2019.10.14 - version 1.0.9 =
  * Add Cryptocurrencies: RPD to plugin
+ 
+= 2019.10.17 - version 1.1.0 =
+ * Add Cryptocurrencies: TELOS, KMD, VRSC to plugin
 
 
