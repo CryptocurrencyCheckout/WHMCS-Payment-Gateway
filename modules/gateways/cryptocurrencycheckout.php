@@ -8,7 +8,7 @@
  * 
  * Author: CryptocurrencyCheckout
  * Author URI: https://cryptocurrencycheckout.com/
- * Version: 1.1.0
+ * Version: 1.1.1
  * 
  * @see https://cryptocurrencycheckout.com/guides/whmcs
  * 
@@ -296,6 +296,14 @@ function cryptocurrencycheckout_config()
             'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
         ),
 
+        'banAddress' => array(
+            'FriendlyName' => 'BAN Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
         'APIToken' => array(
             'FriendlyName' => 'API Token',
             'Type' => 'textarea',
@@ -347,6 +355,7 @@ function cryptocurrencycheckout_link($params)
     $telosAddress = $params['telosAddress'];
     $kmdAddress = $params['kmdAddress'];
     $vrscAddress = $params['vrscAddress'];
+    $banAddress = $params['banAddress'];
 
     // Invoice Parameters
     $CC_invoiceId = $params['invoiceid'];
@@ -388,6 +397,7 @@ function cryptocurrencycheckout_link($params)
     $postfields['CC_TELOS_ADDRESS'] = $telosAddress;
     $postfields['CC_KMD_ADDRESS'] = $kmdAddress;
     $postfields['CC_VRSC_ADDRESS'] = $vrscAddress;
+    $postfields['CC_BAN_ADDRESS'] = $banAddress;
 
     $htmlOutput = '<form method="POST" action="' . $url . '">';
     foreach ($postfields as $k => $v) {
