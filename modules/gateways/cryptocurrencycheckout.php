@@ -8,7 +8,7 @@
  * 
  * Author: CryptocurrencyCheckout
  * Author URI: https://cryptocurrencycheckout.com/
- * Version: 1.1.2
+ * Version: 1.1.3
  * 
  * @see https://cryptocurrencycheckout.com/guides/whmcs
  * 
@@ -312,6 +312,22 @@ function cryptocurrencycheckout_config()
             'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
         ),
 
+        'sinAddress' => array(
+            'FriendlyName' => 'SIN Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
+        'xrpAddress' => array(
+            'FriendlyName' => 'XRP Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
         'APIToken' => array(
             'FriendlyName' => 'API Token',
             'Type' => 'textarea',
@@ -365,6 +381,8 @@ function cryptocurrencycheckout_link($params)
     $vrscAddress = $params['vrscAddress'];
     $banAddress = $params['banAddress'];
     $xbtxAddress = $params['xbtxAddress'];
+    $sinAddress = $params['sinAddress'];
+    $xrpAddress = $params['xrpAddress'];
 
     // Invoice Parameters
     $CC_invoiceId = $params['invoiceid'];
@@ -408,6 +426,8 @@ function cryptocurrencycheckout_link($params)
     $postfields['CC_VRSC_ADDRESS'] = $vrscAddress;
     $postfields['CC_BAN_ADDRESS'] = $banAddress;
     $postfields['CC_XBTX_ADDRESS'] = $xbtxAddress;
+    $postfields['CC_SIN_ADDRESS'] = $sinAddress;
+    $postfields['CC_XRP_ADDRESS'] = $xrpAddress;
 
     $htmlOutput = '<form method="POST" action="' . $url . '">';
     foreach ($postfields as $k => $v) {
