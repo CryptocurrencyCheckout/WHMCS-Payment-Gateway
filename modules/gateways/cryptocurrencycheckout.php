@@ -8,14 +8,14 @@
  * 
  * Author: CryptocurrencyCheckout
  * Author URI: https://cryptocurrencycheckout.com/
- * Version: 1.1.3
+ * Version: 1.1.4
  * 
  * @see https://cryptocurrencycheckout.com/guides/whmcs
  * 
  * License: GNU General Public License v3.0
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
  *
- * @copyright Copyright (c) 2018-2019 CryptocurrencyCheckout (support@cryptocurrencycheckout.com) and WHMCS
+ * @copyright Copyright (c) 2018-2020 CryptocurrencyCheckout (support@cryptocurrencycheckout.com) and WHMCS
  */
 
 if (!defined("WHMCS")) {
@@ -328,6 +328,22 @@ function cryptocurrencycheckout_config()
             'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
         ),
 
+        'upxAddress' => array(
+            'FriendlyName' => 'UPX Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
+        'adcAddress' => array(
+            'FriendlyName' => 'ADC Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
         'APIToken' => array(
             'FriendlyName' => 'API Token',
             'Type' => 'textarea',
@@ -383,6 +399,8 @@ function cryptocurrencycheckout_link($params)
     $xbtxAddress = $params['xbtxAddress'];
     $sinAddress = $params['sinAddress'];
     $xrpAddress = $params['xrpAddress'];
+    $upxAddress = $params['upxAddress'];
+    $adcAddress = $params['adcAddress'];
 
     // Invoice Parameters
     $CC_invoiceId = $params['invoiceid'];
@@ -428,6 +446,8 @@ function cryptocurrencycheckout_link($params)
     $postfields['CC_XBTX_ADDRESS'] = $xbtxAddress;
     $postfields['CC_SIN_ADDRESS'] = $sinAddress;
     $postfields['CC_XRP_ADDRESS'] = $xrpAddress;
+    $postfields['CC_UPX_ADDRESS'] = $upxAddress;
+    $postfields['CC_ADC_ADDRESS'] = $adcAddress;
 
     $htmlOutput = '<form method="POST" action="' . $url . '">';
     foreach ($postfields as $k => $v) {

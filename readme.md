@@ -3,7 +3,7 @@
  - Contributors: Ratstang, CryptocurrencyCheckout
  - Tags: WHMCS, payment gateway, gateway, accept cryptocurrency, crypto, bitcoin, litecoin, ethereum, dash, more.
  - [Donate link](https://cryptocurrencycheckout.com/donate/CryptoCheckout)
- - Stable Tag: 1.1.3
+ - Stable Tag: 1.1.4
  - License: MIT
  - License URI: https://opensource.org/licenses/MIT
 
@@ -94,6 +94,9 @@ Please do! We'd like to see the changes and different methods people come up for
 
 = 2020.01.07 - version 1.1.3 =
 * Add Cryptocurrencies: SIN & XRP to plugin
+
+= 2020.01.30 - version 1.1.4 =
+* Add Cryptocurrencies: UPX & ADC to plugin
 
 
 
