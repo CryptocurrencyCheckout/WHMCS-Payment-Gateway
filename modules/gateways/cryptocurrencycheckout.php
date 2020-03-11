@@ -8,7 +8,7 @@
  * 
  * Author: CryptocurrencyCheckout
  * Author URI: https://cryptocurrencycheckout.com/
- * Version: 1.1.5
+ * Version: 1.1.6
  * 
  * @see https://cryptocurrencycheckout.com/guides/whmcs
  * 
@@ -352,6 +352,22 @@ function cryptocurrencycheckout_config()
             'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
         ),
 
+        'birAddress' => array(
+            'FriendlyName' => 'BIR Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
+        'axeAddress' => array(
+            'FriendlyName' => 'AXE Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
         'APIToken' => array(
             'FriendlyName' => 'API Token',
             'Type' => 'textarea',
@@ -410,6 +426,8 @@ function cryptocurrencycheckout_link($params)
     $upxAddress = $params['upxAddress'];
     $adcAddress = $params['adcAddress'];
     $ritoAddress = $params['ritoAddress'];
+    $birAddress = $params['birAddress'];
+    $axeAddress = $params['axeAddress'];
 
     // Invoice Parameters
     $CC_invoiceId = $params['invoiceid'];
@@ -458,6 +476,8 @@ function cryptocurrencycheckout_link($params)
     $postfields['CC_UPX_ADDRESS'] = $upxAddress;
     $postfields['CC_ADC_ADDRESS'] = $adcAddress;
     $postfields['CC_RITO_ADDRESS'] = $ritoAddress;
+    $postfields['CC_BIR_ADDRESS'] = $birAddress;
+    $postfields['CC_AXE_ADDRESS'] = $axeAddress;
 
     $htmlOutput = '<form method="POST" action="' . $url . '">';
     foreach ($postfields as $k => $v) {

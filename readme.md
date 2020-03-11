@@ -3,7 +3,7 @@
  - Contributors: Ratstang, CryptocurrencyCheckout
  - Tags: WHMCS, payment gateway, gateway, accept cryptocurrency, crypto, bitcoin, litecoin, ethereum, dash, more.
  - [Donate link](https://cryptocurrencycheckout.com/donate/CryptoCheckout)
- - Stable Tag: 1.1.5
+ - Stable Tag: 1.1.6
  - License: MIT
  - License URI: https://opensource.org/licenses/MIT
 
@@ -15,7 +15,7 @@
 This Plugin connects your WHMCS Platform Checkout to the CryptocurrencyCheckout Payment Gateway so you can start accepting Cryptocurrencies like Bitcoin, Ethereum, Dash, Litecoin and more for free.
 
 **What cryptocurrencies can be currently accept?:**
-Bitcoin, Ethereum, Litecoin, Dash, Zenzo, PirateChain, CryptoDezireCash, Social Send, ColossusXT, HempCoin, Electra, PIVX, Niobio, Galilel, Bitcash, Bitcash, OKcash, Ethplode, Veil, Ark, Dogecoin, Netbox, Nerva, Sumokoin, Rapids, Transcendence, Komodo, Verus, Banano, Bitcoin-Subsidium, Sinovate, Ripple, Uplexa, AudioCoin, RitoCoin.
+Bitcoin, Ethereum, Litecoin, Dash, Zenzo, PirateChain, CryptoDezireCash, Social Send, ColossusXT, HempCoin, Electra, PIVX, Niobio, Galilel, Bitcash, Bitcash, OKcash, Ethplode, Veil, Ark, Dogecoin, Netbox, Nerva, Sumokoin, Rapids, Transcendence, Komodo, Verus, Banano, Bitcoin-Subsidium, Sinovate, Ripple, Uplexa, AudioCoin, RitoCoin, Birake, Axe
 Want your coin added? Or want to suggest a coin to be added? Contact us.
 
 **What is CryptocurrencyCheckout:**
@@ -100,6 +100,9 @@ Please do! We'd like to see the changes and different methods people come up for
 
 = 2020.02.11 - version 1.1.5 =
 * Add Cryptocurrencies: RITO to plugin
+
+= 2020.03.10 - version 1.1.6 =
+* Add Cryptocurrencies: BIR and AXE to plugin
 
 
 
