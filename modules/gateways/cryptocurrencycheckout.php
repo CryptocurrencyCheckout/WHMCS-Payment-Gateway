@@ -8,7 +8,7 @@
  * 
  * Author: CryptocurrencyCheckout
  * Author URI: https://cryptocurrencycheckout.com/
- * Version: 1.1.6
+ * Version: 1.1.7
  * 
  * @see https://cryptocurrencycheckout.com/guides/whmcs
  * 
@@ -368,6 +368,14 @@ function cryptocurrencycheckout_config()
             'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
         ),
 
+        'hushAddress' => array(
+            'FriendlyName' => 'HUSH Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
         'APIToken' => array(
             'FriendlyName' => 'API Token',
             'Type' => 'textarea',
@@ -428,6 +436,7 @@ function cryptocurrencycheckout_link($params)
     $ritoAddress = $params['ritoAddress'];
     $birAddress = $params['birAddress'];
     $axeAddress = $params['axeAddress'];
+    $hushAddress = $params['hushAddress'];
 
     // Invoice Parameters
     $CC_invoiceId = $params['invoiceid'];
@@ -478,6 +487,7 @@ function cryptocurrencycheckout_link($params)
     $postfields['CC_RITO_ADDRESS'] = $ritoAddress;
     $postfields['CC_BIR_ADDRESS'] = $birAddress;
     $postfields['CC_AXE_ADDRESS'] = $axeAddress;
+    $postfields['CC_HUSH_ADDRESS'] = $hushAddress;
 
     $htmlOutput = '<form method="POST" action="' . $url . '">';
     foreach ($postfields as $k => $v) {
