@@ -8,7 +8,7 @@
  * 
  * Author: CryptocurrencyCheckout
  * Author URI: https://cryptocurrencycheckout.com/
- * Version: 1.1.7
+ * Version: 1.1.8
  * 
  * @see https://cryptocurrencycheckout.com/guides/whmcs
  * 
@@ -376,6 +376,30 @@ function cryptocurrencycheckout_config()
             'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
         ),
 
+        'ccyAddress' => array(
+            'FriendlyName' => 'CCY Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
+        'motaAddress' => array(
+            'FriendlyName' => 'MOTA Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
+        'pgoAddress' => array(
+            'FriendlyName' => 'PGO Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
         'APIToken' => array(
             'FriendlyName' => 'API Token',
             'Type' => 'textarea',
@@ -437,6 +461,9 @@ function cryptocurrencycheckout_link($params)
     $birAddress = $params['birAddress'];
     $axeAddress = $params['axeAddress'];
     $hushAddress = $params['hushAddress'];
+    $ccyAddress = $params['ccyAddress'];
+    $motaAddress = $params['motaAddress'];
+    $pgoAddress = $params['pgoAddress'];
 
     // Invoice Parameters
     $CC_invoiceId = $params['invoiceid'];
@@ -488,6 +515,9 @@ function cryptocurrencycheckout_link($params)
     $postfields['CC_BIR_ADDRESS'] = $birAddress;
     $postfields['CC_AXE_ADDRESS'] = $axeAddress;
     $postfields['CC_HUSH_ADDRESS'] = $hushAddress;
+    $postfields['CC_CCY_ADDRESS'] = $ccyAddress;
+    $postfields['CC_MOTA_ADDRESS'] = $motaAddress;
+    $postfields['CC_PGO_ADDRESS'] = $pgoAddress;
 
     $htmlOutput = '<form method="POST" action="' . $url . '">';
     foreach ($postfields as $k => $v) {
