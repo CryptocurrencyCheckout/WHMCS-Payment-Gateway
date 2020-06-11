@@ -8,7 +8,7 @@
  * 
  * Author: CryptocurrencyCheckout
  * Author URI: https://cryptocurrencycheckout.com/
- * Version: 1.1.9
+ * Version: 1.2.0
  * 
  * @see https://cryptocurrencycheckout.com/guides/whmcs
  * 
@@ -408,6 +408,22 @@ function cryptocurrencycheckout_config()
             'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
         ),
 
+        'grtAddress' => array(
+            'FriendlyName' => 'GRT Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
+        'nulsAddress' => array(
+            'FriendlyName' => 'NULS Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
         'APIToken' => array(
             'FriendlyName' => 'API Token',
             'Type' => 'textarea',
@@ -473,6 +489,8 @@ function cryptocurrencycheckout_link($params)
     $motaAddress = $params['motaAddress'];
     $pgoAddress = $params['pgoAddress'];
     $bitgAddress = $params['bitgAddress'];
+    $grtAddress = $params['grtAddress'];
+    $nulsAddress = $params['nulsAddress'];
 
     // Invoice Parameters
     $CC_invoiceId = $params['invoiceid'];
@@ -528,6 +546,8 @@ function cryptocurrencycheckout_link($params)
     $postfields['CC_MOTA_ADDRESS'] = $motaAddress;
     $postfields['CC_PGO_ADDRESS'] = $pgoAddress;
     $postfields['CC_BITG_ADDRESS'] = $bitgAddress;
+    $postfields['CC_GRT_ADDRESS'] = $grtAddress;
+    $postfields['CC_NULS_ADDRESS'] = $nulsAddress;
 
     $htmlOutput = '<form method="POST" action="' . $url . '">';
     foreach ($postfields as $k => $v) {
