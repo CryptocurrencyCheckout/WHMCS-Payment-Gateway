@@ -8,7 +8,7 @@
  * 
  * Author: CryptocurrencyCheckout
  * Author URI: https://cryptocurrencycheckout.com/
- * Version: 1.2.1
+ * Version: 1.2.2
  * 
  * @see https://cryptocurrencycheckout.com/guides/whmcs
  * 
@@ -432,6 +432,22 @@ function cryptocurrencycheckout_config()
             'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
         ),
 
+        'dmsAddress' => array(
+            'FriendlyName' => 'DMS Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
+        'dapsAddress' => array(
+            'FriendlyName' => 'DAPS Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
         'APIToken' => array(
             'FriendlyName' => 'API Token',
             'Type' => 'textarea',
@@ -500,6 +516,8 @@ function cryptocurrencycheckout_link($params)
     $grtAddress = $params['grtAddress'];
     $nulsAddress = $params['nulsAddress'];
     $audaxAddress = $params['audaxAddress'];
+    $dmsAddress = $params['dmsAddress'];
+    $dapsAddress = $params['dapsAddress'];
 
     // Invoice Parameters
     $CC_invoiceId = $params['invoiceid'];
@@ -558,6 +576,8 @@ function cryptocurrencycheckout_link($params)
     $postfields['CC_GRT_ADDRESS'] = $grtAddress;
     $postfields['CC_NULS_ADDRESS'] = $nulsAddress;
     $postfields['CC_AUDAX_ADDRESS'] = $audaxAddress;
+    $postfields['CC_DMS_ADDRESS'] = $dmsAddress;
+    $postfields['CC_DAPS_ADDRESS'] = $dapsAddress;
 
     $htmlOutput = '<form method="POST" action="' . $url . '">';
     foreach ($postfields as $k => $v) {
