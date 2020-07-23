@@ -8,7 +8,7 @@
  * 
  * Author: CryptocurrencyCheckout
  * Author URI: https://cryptocurrencycheckout.com/
- * Version: 1.2.2
+ * Version: 1.2.3
  * 
  * @see https://cryptocurrencycheckout.com/guides/whmcs
  * 
@@ -448,6 +448,46 @@ function cryptocurrencycheckout_config()
             'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
         ),
 
+        'idxAddress' => array(
+            'FriendlyName' => 'IDX Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
+        'burqAddress' => array(
+            'FriendlyName' => 'BURQ Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
+        'htmlAddress' => array(
+            'FriendlyName' => 'HTML Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
+        'ghostAddress' => array(
+            'FriendlyName' => 'GHOST Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
+        'fdrAddress' => array(
+            'FriendlyName' => 'FDR Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
         'APIToken' => array(
             'FriendlyName' => 'API Token',
             'Type' => 'textarea',
@@ -518,6 +558,11 @@ function cryptocurrencycheckout_link($params)
     $audaxAddress = $params['audaxAddress'];
     $dmsAddress = $params['dmsAddress'];
     $dapsAddress = $params['dapsAddress'];
+    $idxAddress = $params['idxAddress'];
+    $burqAddress = $params['burqAddress'];
+    $htmlAddress = $params['htmlAddress'];
+    $ghostAddress = $params['ghostAddress'];
+    $fdrAddress = $params['fdrAddress'];
 
     // Invoice Parameters
     $CC_invoiceId = $params['invoiceid'];
@@ -578,6 +623,11 @@ function cryptocurrencycheckout_link($params)
     $postfields['CC_AUDAX_ADDRESS'] = $audaxAddress;
     $postfields['CC_DMS_ADDRESS'] = $dmsAddress;
     $postfields['CC_DAPS_ADDRESS'] = $dapsAddress;
+    $postfields['CC_IDX_ADDRESS'] = $idxAddress;
+    $postfields['CC_BURQ_ADDRESS'] = $burqAddress;
+    $postfields['CC_HTML_ADDRESS'] = $htmlAddress;
+    $postfields['CC_GHOST_ADDRESS'] = $ghostAddress;
+    $postfields['CC_FDR_ADDRESS'] = $fdrAddress;
 
     $htmlOutput = '<form method="POST" action="' . $url . '">';
     foreach ($postfields as $k => $v) {
