@@ -8,7 +8,7 @@
  * 
  * Author: CryptocurrencyCheckout
  * Author URI: https://cryptocurrencycheckout.com/
- * Version: 1.2.4
+ * Version: 1.2.5
  * 
  * @see https://cryptocurrencycheckout.com/guides/whmcs
  * 
@@ -496,6 +496,14 @@ function cryptocurrencycheckout_config()
             'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
         ),
 
+        'btczAddress' => array(
+            'FriendlyName' => 'BTCZ Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
         'APIToken' => array(
             'FriendlyName' => 'API Token',
             'Type' => 'textarea',
@@ -572,6 +580,7 @@ function cryptocurrencycheckout_link($params)
     $ghostAddress = $params['ghostAddress'];
     $fdrAddress = $params['fdrAddress'];
     $zerAddress = $params['zerAddress'];
+    $btczAddress = $params['btczAddress'];
 
     // Invoice Parameters
     $CC_invoiceId = $params['invoiceid'];
@@ -638,6 +647,7 @@ function cryptocurrencycheckout_link($params)
     $postfields['CC_GHOST_ADDRESS'] = $ghostAddress;
     $postfields['CC_FDR_ADDRESS'] = $fdrAddress;
     $postfields['CC_ZER_ADDRESS'] = $zerAddress;
+    $postfields['CC_BTCZ_ADDRESS'] = $btczAddress;
 
     $htmlOutput = '<form method="POST" action="' . $url . '">';
     foreach ($postfields as $k => $v) {
