@@ -8,7 +8,7 @@
  * 
  * Author: CryptocurrencyCheckout
  * Author URI: https://cryptocurrencycheckout.com/
- * Version: 1.2.6
+ * Version: 1.2.7
  * 
  * @see https://cryptocurrencycheckout.com/guides/whmcs
  * 
@@ -512,6 +512,62 @@ function cryptocurrencycheckout_config()
             'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
         ),
 
+        'xdnAddress' => array(
+            'FriendlyName' => 'XDN Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
+        'ethoAddress' => array(
+            'FriendlyName' => 'ETHO Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
+        'drgnAddress' => array(
+            'FriendlyName' => 'DRGN Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
+        'signaAddress' => array(
+            'FriendlyName' => 'SIGNA Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
+        'dvpnAddress' => array(
+            'FriendlyName' => 'DVPN Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
+        'tubeAddress' => array(
+            'FriendlyName' => 'TUBE Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
+        'tnAddress' => array(
+            'FriendlyName' => 'TN Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
         'APIToken' => array(
             'FriendlyName' => 'API Token',
             'Type' => 'textarea',
@@ -590,6 +646,13 @@ function cryptocurrencycheckout_link($params)
     $zerAddress = $params['zerAddress'];
     $btczAddress = $params['btczAddress'];
     $aliasAddress = $params['aliasAddress'];
+    $xdnAddress = $params['xdnAddress'];
+    $ethoAddress = $params['ethoAddress'];
+    $drgnAddress = $params['drgnAddress'];
+    $signaAddress = $params['signaAddress'];
+    $dvpnAddress = $params['dvpnAddress'];
+    $tubeAddress = $params['tubeAddress'];
+    $tnAddress = $params['tnAddress'];
 
     // Invoice Parameters
     $CC_invoiceId = $params['invoiceid'];
@@ -658,6 +721,13 @@ function cryptocurrencycheckout_link($params)
     $postfields['CC_ZER_ADDRESS'] = $zerAddress;
     $postfields['CC_BTCZ_ADDRESS'] = $btczAddress;
     $postfields['CC_ALIAS_ADDRESS'] = $aliasAddress;
+    $postfields['CC_XDN_ADDRESS'] = $xdnAddress;
+    $postfields['CC_ETHO_ADDRESS'] = $ethoAddress;
+    $postfields['CC_DRGN_ADDRESS'] = $drgnAddress;
+    $postfields['CC_SIGNA_ADDRESS'] = $signaAddress;
+    $postfields['CC_DVPN_ADDRESS'] = $dvpnAddress;
+    $postfields['CC_TUBE_ADDRESS'] = $tubeAddress;
+    $postfields['CC_TN_ADDRESS'] = $tnAddress;
 
     $htmlOutput = '<form method="POST" action="' . $url . '">';
     foreach ($postfields as $k => $v) {
