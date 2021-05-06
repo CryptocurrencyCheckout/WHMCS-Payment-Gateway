@@ -8,7 +8,7 @@
  * 
  * Author: CryptocurrencyCheckout
  * Author URI: https://cryptocurrencycheckout.com/
- * Version: 1.2.7
+ * Version: 1.2.8
  * 
  * @see https://cryptocurrencycheckout.com/guides/whmcs
  * 
@@ -568,6 +568,46 @@ function cryptocurrencycheckout_config()
             'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
         ),
 
+        'ergAddress' => array(
+            'FriendlyName' => 'ERG Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
+        'sigusdAddress' => array(
+            'FriendlyName' => 'SIGUSD Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
+        'bnjAddress' => array(
+            'FriendlyName' => 'BNJ Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
+        'usdtAddress' => array(
+            'FriendlyName' => 'USDT Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
+        'eggAddress' => array(
+            'FriendlyName' => 'EGG Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
         'APIToken' => array(
             'FriendlyName' => 'API Token',
             'Type' => 'textarea',
@@ -653,6 +693,11 @@ function cryptocurrencycheckout_link($params)
     $dvpnAddress = $params['dvpnAddress'];
     $tubeAddress = $params['tubeAddress'];
     $tnAddress = $params['tnAddress'];
+    $ergAddress = $params['ergAddress'];
+    $sigusdAddress = $params['sigusdAddress'];
+    $bnjAddress = $params['bnjAddress'];
+    $usdtAddress = $params['usdtAddress'];
+    $eggAddress = $params['eggAddress'];
 
     // Invoice Parameters
     $CC_invoiceId = $params['invoiceid'];
@@ -728,6 +773,11 @@ function cryptocurrencycheckout_link($params)
     $postfields['CC_DVPN_ADDRESS'] = $dvpnAddress;
     $postfields['CC_TUBE_ADDRESS'] = $tubeAddress;
     $postfields['CC_TN_ADDRESS'] = $tnAddress;
+    $postfields['CC_ERG_ADDRESS'] = $ergAddress;
+    $postfields['CC_SIGUSD_ADDRESS'] = $sigusdAddress;
+    $postfields['CC_BNJ_ADDRESS'] = $bnjAddress;
+    $postfields['CC_USDT_ADDRESS'] = $usdtAddress;
+    $postfields['CC_EGG_ADDRESS'] = $eggAddress;
 
     $htmlOutput = '<form method="POST" action="' . $url . '">';
     foreach ($postfields as $k => $v) {
