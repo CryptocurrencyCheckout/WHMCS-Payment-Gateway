@@ -8,7 +8,7 @@
  * 
  * Author: CryptocurrencyCheckout
  * Author URI: https://cryptocurrencycheckout.com/
- * Version: 1.2.9
+ * Version: 1.3.0
  * 
  * @see https://cryptocurrencycheckout.com/guides/whmcs
  * 
@@ -616,6 +616,22 @@ function cryptocurrencycheckout_config()
             'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
         ),
 
+        'xhvAddress' => array(
+            'FriendlyName' => 'XHV Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
+        'xusdAddress' => array(
+            'FriendlyName' => 'XUSD Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
         'APIToken' => array(
             'FriendlyName' => 'API Token',
             'Type' => 'textarea',
@@ -707,6 +723,8 @@ function cryptocurrencycheckout_link($params)
     $usdtAddress = $params['usdtAddress'];
     $eggAddress = $params['eggAddress'];
     $nlifeAddress = $params['nlifeAddress'];
+    $xhvAddress = $params['xhvAddress'];
+    $xusdAddress = $params['xusdAddress'];
 
     // Invoice Parameters
     $CC_invoiceId = $params['invoiceid'];
@@ -788,6 +806,8 @@ function cryptocurrencycheckout_link($params)
     $postfields['CC_USDT_ADDRESS'] = $usdtAddress;
     $postfields['CC_EGG_ADDRESS'] = $eggAddress;
     $postfields['CC_NLIFE_ADDRESS'] = $nlifeAddress;
+    $postfields['CC_XHV_ADDRESS'] = $xhvAddress;
+    $postfields['CC_XUSD_ADDRESS'] = $xusdAddress;
 
     $htmlOutput = '<form method="POST" action="' . $url . '">';
     foreach ($postfields as $k => $v) {
