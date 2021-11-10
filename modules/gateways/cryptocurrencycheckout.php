@@ -8,7 +8,7 @@
  * 
  * Author: CryptocurrencyCheckout
  * Author URI: https://cryptocurrencycheckout.com/
- * Version: 1.3.0
+ * Version: 1.3.1
  * 
  * @see https://cryptocurrencycheckout.com/guides/whmcs
  * 
@@ -632,6 +632,30 @@ function cryptocurrencycheckout_config()
             'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
         ),
 
+        'moonshotAddress' => array(
+            'FriendlyName' => 'MOONSHOT Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
+        'gthAddress' => array(
+            'FriendlyName' => 'GTH Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
+        'hnsAddress' => array(
+            'FriendlyName' => 'HNS Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
         'APIToken' => array(
             'FriendlyName' => 'API Token',
             'Type' => 'textarea',
@@ -725,6 +749,9 @@ function cryptocurrencycheckout_link($params)
     $nlifeAddress = $params['nlifeAddress'];
     $xhvAddress = $params['xhvAddress'];
     $xusdAddress = $params['xusdAddress'];
+    $moonshotAddress = $params['moonshotAddress'];
+    $gthAddress = $params['gthAddress'];
+    $hnsAddress = $params['hnsAddress'];
 
     // Invoice Parameters
     $CC_invoiceId = $params['invoiceid'];
@@ -808,6 +835,9 @@ function cryptocurrencycheckout_link($params)
     $postfields['CC_NLIFE_ADDRESS'] = $nlifeAddress;
     $postfields['CC_XHV_ADDRESS'] = $xhvAddress;
     $postfields['CC_XUSD_ADDRESS'] = $xusdAddress;
+    $postfields['CC_MOONSHOT_ADDRESS'] = $moonshotAddress;
+    $postfields['CC_GTH_ADDRESS'] = $gthAddress;
+    $postfields['CC_HNS_ADDRESS'] = $hnsAddress;
 
     $htmlOutput = '<form method="POST" action="' . $url . '">';
     foreach ($postfields as $k => $v) {
