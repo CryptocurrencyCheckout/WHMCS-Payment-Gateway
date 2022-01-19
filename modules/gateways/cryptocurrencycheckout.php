@@ -8,7 +8,7 @@
  * 
  * Author: CryptocurrencyCheckout
  * Author URI: https://cryptocurrencycheckout.com/
- * Version: 1.3.1
+ * Version: 1.3.2
  * 
  * @see https://cryptocurrencycheckout.com/guides/whmcs
  * 
@@ -656,6 +656,14 @@ function cryptocurrencycheckout_config()
             'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
         ),
 
+        'rtmAddress' => array(
+            'FriendlyName' => 'RTM Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
         'APIToken' => array(
             'FriendlyName' => 'API Token',
             'Type' => 'textarea',
@@ -752,6 +760,7 @@ function cryptocurrencycheckout_link($params)
     $moonshotAddress = $params['moonshotAddress'];
     $gthAddress = $params['gthAddress'];
     $hnsAddress = $params['hnsAddress'];
+    $rtmAddress = $params['rtmAddress'];
 
     // Invoice Parameters
     $CC_invoiceId = $params['invoiceid'];
@@ -838,6 +847,7 @@ function cryptocurrencycheckout_link($params)
     $postfields['CC_MOONSHOT_ADDRESS'] = $moonshotAddress;
     $postfields['CC_GTH_ADDRESS'] = $gthAddress;
     $postfields['CC_HNS_ADDRESS'] = $hnsAddress;
+    $postfields['CC_RTM_ADDRESS'] = $rtmAddress;
 
     $htmlOutput = '<form method="POST" action="' . $url . '">';
     foreach ($postfields as $k => $v) {
