@@ -8,7 +8,7 @@
  * 
  * Author: CryptocurrencyCheckout
  * Author URI: https://cryptocurrencycheckout.com/
- * Version: 1.3.6
+ * Version: 1.3.7
  * 
  * @see https://cryptocurrencycheckout.com/guides/whmcs
  * 
@@ -736,6 +736,22 @@ function cryptocurrencycheckout_config()
             'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
         ),
 
+        'kasAddress' => array(
+            'FriendlyName' => 'KAS Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
+        'mariaAddress' => array(
+            'FriendlyName' => 'MARIA Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
         'APIToken' => array(
             'FriendlyName' => 'API Token',
             'Type' => 'textarea',
@@ -842,6 +858,9 @@ function cryptocurrencycheckout_link($params)
     $primoAddress = $params['primoAddress'];
     $ccxAddress = $params['ccxAddress'];
     $bdxAddress = $params['bdxAddress'];
+    $kasAddress = $params['kasAddress'];
+    $mariaAddress = $params['mariaAddress'];
+
 
     // Invoice Parameters
     $CC_invoiceId = $params['invoiceid'];
@@ -938,6 +957,8 @@ function cryptocurrencycheckout_link($params)
     $postfields['CC_PRIMO_ADDRESS'] = $primoAddress;
     $postfields['CC_CCX_ADDRESS'] = $ccxAddress;
     $postfields['CC_BDX_ADDRESS'] = $bdxAddress;
+    $postfields['CC_KAS_ADDRESS'] = $kasAddress;
+    $postfields['CC_MARIA_ADDRESS'] = $mariaAddress;
 
     $htmlOutput = '<form method="POST" action="' . $url . '">';
     foreach ($postfields as $k => $v) {
