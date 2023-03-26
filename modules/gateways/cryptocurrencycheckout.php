@@ -8,7 +8,7 @@
  * 
  * Author: CryptocurrencyCheckout
  * Author URI: https://cryptocurrencycheckout.com/
- * Version: 1.3.7
+ * Version: 1.3.8
  * 
  * @see https://cryptocurrencycheckout.com/guides/whmcs
  * 
@@ -752,6 +752,38 @@ function cryptocurrencycheckout_config()
             'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
         ),
 
+        'fluxAddress' => array(
+            'FriendlyName' => 'FLUX Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
+        'papryAddress' => array(
+            'FriendlyName' => 'PAPRY Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
+        'nexaAddress' => array(
+            'FriendlyName' => 'NEXA Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
+        'bchAddress' => array(
+            'FriendlyName' => 'BCH Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
         'APIToken' => array(
             'FriendlyName' => 'API Token',
             'Type' => 'textarea',
@@ -860,6 +892,10 @@ function cryptocurrencycheckout_link($params)
     $bdxAddress = $params['bdxAddress'];
     $kasAddress = $params['kasAddress'];
     $mariaAddress = $params['mariaAddress'];
+    $fluxAddress = $params['fluxAddress'];
+    $papryAddress = $params['papryAddress'];
+    $nexaAddress = $params['nexaAddress'];
+    $bchAddress = $params['bchAddress'];
 
 
     // Invoice Parameters
@@ -959,6 +995,10 @@ function cryptocurrencycheckout_link($params)
     $postfields['CC_BDX_ADDRESS'] = $bdxAddress;
     $postfields['CC_KAS_ADDRESS'] = $kasAddress;
     $postfields['CC_MARIA_ADDRESS'] = $mariaAddress;
+    $postfields['CC_FLUX_ADDRESS'] = $fluxAddress;
+    $postfields['CC_PAPRY_ADDRESS'] = $papryAddress;
+    $postfields['CC_NEXA_ADDRESS'] = $nexaAddress;
+    $postfields['CC_BCH_ADDRESS'] = $bchAddress;
 
     $htmlOutput = '<form method="POST" action="' . $url . '">';
     foreach ($postfields as $k => $v) {
