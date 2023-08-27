@@ -8,7 +8,7 @@
  * 
  * Author: CryptocurrencyCheckout
  * Author URI: https://cryptocurrencycheckout.com/
- * Version: 1.3.8
+ * Version: 1.3.9
  * 
  * @see https://cryptocurrencycheckout.com/guides/whmcs
  * 
@@ -202,14 +202,6 @@ function cryptocurrencycheckout_config()
 
         'okAddress' => array(
             'FriendlyName' => 'OK Address',
-            'Type' => 'text',
-            'Size' => '25',
-            'Default' => '',
-            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
-        ),
-
-        'ethploAddress' => array(
-            'FriendlyName' => 'ETHplode Address',
             'Type' => 'text',
             'Size' => '25',
             'Default' => '',
@@ -784,6 +776,14 @@ function cryptocurrencycheckout_config()
             'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
         ),
 
+        'kiiroAddress' => array(
+            'FriendlyName' => 'KIIRO Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
         'APIToken' => array(
             'FriendlyName' => 'API Token',
             'Type' => 'textarea',
@@ -824,7 +824,6 @@ function cryptocurrencycheckout_link($params)
     $galiAddress = $params['galiAddress'];
     $bitcAddress = $params['bitcAddress'];
     $okAddress = $params['okAddress'];
-    $ethploAddress = $params['ethploAddress'];
     $arkAddress = $params['arkAddress'];
     $veilAddress = $params['veilAddress'];
     $dogeAddress = $params['dogeAddress'];
@@ -896,6 +895,7 @@ function cryptocurrencycheckout_link($params)
     $papryAddress = $params['papryAddress'];
     $nexaAddress = $params['nexaAddress'];
     $bchAddress = $params['bchAddress'];
+    $kiiroAddress = $params['kiiroAddress'];
 
 
     // Invoice Parameters
@@ -927,7 +927,6 @@ function cryptocurrencycheckout_link($params)
     $postfields['CC_GALI_ADDRESS'] = $galiAddress;
     $postfields['CC_BITC_ADDRESS'] = $bitcAddress;
     $postfields['CC_OK_ADDRESS'] = $okAddress;
-    $postfields['CC_ETHPLO_ADDRESS'] = $ethploAddress;
     $postfields['CC_ARK_ADDRESS'] = $arkAddress;
     $postfields['CC_VEIL_ADDRESS'] = $veilAddress;
     $postfields['CC_DOGE_ADDRESS'] = $dogeAddress;
@@ -999,6 +998,7 @@ function cryptocurrencycheckout_link($params)
     $postfields['CC_PAPRY_ADDRESS'] = $papryAddress;
     $postfields['CC_NEXA_ADDRESS'] = $nexaAddress;
     $postfields['CC_BCH_ADDRESS'] = $bchAddress;
+    $postfields['CC_KIIRO_ADDRESS'] = $kiiroAddress;
 
     $htmlOutput = '<form method="POST" action="' . $url . '">';
     foreach ($postfields as $k => $v) {
