@@ -8,7 +8,7 @@
  * 
  * Author: CryptocurrencyCheckout
  * Author URI: https://cryptocurrencycheckout.com/
- * Version: 1.3.9
+ * Version: 1.3.10
  * 
  * @see https://cryptocurrencycheckout.com/guides/whmcs
  * 
@@ -784,6 +784,14 @@ function cryptocurrencycheckout_config()
             'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
         ),
 
+        'blocxAddress' => array(
+            'FriendlyName' => 'BLOCX Address',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Must Match CryptocurrencyCheckout Dashboard',
+        ),
+
         'APIToken' => array(
             'FriendlyName' => 'API Token',
             'Type' => 'textarea',
@@ -896,6 +904,7 @@ function cryptocurrencycheckout_link($params)
     $nexaAddress = $params['nexaAddress'];
     $bchAddress = $params['bchAddress'];
     $kiiroAddress = $params['kiiroAddress'];
+    $blocxAddress = $params['blocxAddress'];
 
 
     // Invoice Parameters
@@ -999,6 +1008,7 @@ function cryptocurrencycheckout_link($params)
     $postfields['CC_NEXA_ADDRESS'] = $nexaAddress;
     $postfields['CC_BCH_ADDRESS'] = $bchAddress;
     $postfields['CC_KIIRO_ADDRESS'] = $kiiroAddress;
+    $postfields['CC_BLOCX_ADDRESS'] = $blocxAddress;
 
     $htmlOutput = '<form method="POST" action="' . $url . '">';
     foreach ($postfields as $k => $v) {

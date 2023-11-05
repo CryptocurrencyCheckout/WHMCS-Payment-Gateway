@@ -3,7 +3,7 @@
  - Contributors: Ratstang, CryptocurrencyCheckout
  - Tags: WHMCS, payment gateway, gateway, accept cryptocurrency, crypto, bitcoin, litecoin, ethereum, dash, more.
  - [Donate link](https://cryptocurrencycheckout.com/donate/CryptoCheckout)
- - Stable Tag: 1.3.9
+ - Stable Tag: 1.3.10
  - License: MIT
  - License URI: https://opensource.org/licenses/MIT
 
@@ -175,6 +175,9 @@ Please do! We'd like to see the changes and different methods people come up for
 = 2023.08.27 - version 1.3.9 =
 * Add Cryptocurrencies: KIIRO to plugin
 * Remove Cryptocurrencies: ETHPLO from plugin
+
+= 2023.11.05 - version 1.3.10 =
+* Add Cryptocurrencies: BLOCX to plugin
 
 
 
